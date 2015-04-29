@@ -20,9 +20,21 @@ double distance (double x1, double y1, double x2, double y2){
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         const float ERROR_THRESHOLD=0.05;
-        if (distance(0, 0, 0, 1)-1.0 > ERROR_THRESHOLD){
+        if (distance(0, 0, 1, 0)- 1.0> ERROR_THRESHOLD){
             NSLog (@"Invalid Answer");
             
+        }
+        if (distance(0, 0, 0, 0) != 0){
+            NSLog(@"Invalid Answer");
+        }
+        if (distance(0, 0, 1, 1) -1.41 > ERROR_THRESHOLD){
+            NSLog(@"Invalid Answer");
+        }
+        if (distance(0, 0, 5, 5) -7.07 > ERROR_THRESHOLD){
+            NSLog(@"Invalid Answer");
+        }
+        if (distance(1, 1, 5, 6) -6.40 > ERROR_THRESHOLD){
+            NSLog(@"Invalid Answer");
         }
         
     }
